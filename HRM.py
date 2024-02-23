@@ -15,14 +15,14 @@ import seaborn as sns
 
 # - - - - - - - - - - - - - - -set st addbar page - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-icon = Image.open("C:/Users/prabh/Downloads/Datascience/Project/CT/1.png")
+icon = Image.open("C:/Users/vinoth/Downloads/Datascience/Project/CT/1.png")
 st.set_page_config(page_title= "HRM", page_icon= icon, layout= "wide", initial_sidebar_state= "expanded",
                    menu_items={'About': """# This Flat Resale page is created by *Prabakaran!"""})
 st.markdown("<h1 style='text-align: center; color: black;'>Industrial Human Resource Geo-Visualization</h1>", unsafe_allow_html=True)
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
-data = pd.read_csv("C:/Users/prabh/Downloads/Datascience/Project/CT/final_HR.csv")
+data = pd.read_csv("C:/Users/vinoth/Downloads/Datascience/Project/CT/final_HR.csv")
 
 unique_states = sorted(data['State'].unique())
 selected_state = st.sidebar.selectbox("Select State", unique_states, key="state_selector_unique")
@@ -139,7 +139,7 @@ st.plotly_chart(fig)
 
 
 # Geo-Map Visualization
-data = pd.read_csv("C:/Users/prabh/Downloads/Datascience/Project/CT/final_HR.csv")
+data = pd.read_csv("C:/Users/vinoth/Downloads/Datascience/Project/CT/final_HR.csv")
 
 state_data = data[(data['State'] == selected_state)]
 district_data = data[(data['District'] == selected_district)]
